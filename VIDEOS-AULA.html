@@ -182,7 +182,7 @@ a[x-apple-data-detectors] {
    
    
    
-   
+"
 <table class='mcnBoxedTextBlock' style='min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;' width='100%' cellspacing='0' cellpadding='0' border='0'>
 <tbody class='mcnBoxedTextBlockOuter'>
   <tr>
@@ -195,7 +195,12 @@ a[x-apple-data-detectors] {
                 <tbody>
                   <tr>
                     <td class='mcnTextContent' style='padding: 18px;color: black;font-family: Helvetica;font-size: 16px;font-weight: normal;line-height: 20%;text-align: center;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;' valign='top'>
-                      <span style='font-size:17px'>Aula 01</span>
+                      <span style='font-size:17px'>"
+                        If (
+                          not IsEmpty ( link ) and ( B_enviar = 1 );
+                            Aula " & c_aula & "
+                        ) & "
+                      </span>
                     </td>
                   </tr>
                 </tbody>
@@ -218,8 +223,16 @@ a[x-apple-data-detectors] {
           <tr>
             <td class='mcnTextContent' style='padding: 5px 18px;color: #333333;font-family: Helvetica;font-size: 14px;font-weight: normal;text-align: left;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;line-height: 150%;' width='546' valign='top'>
               <p style='margin: 0px 0px 1em;color: #333333;font-family: Helvetica;font-size: 14px;font-weight: normal;text-align: left;padding: 0;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;line-height: 150%;'>
-              <span style='color:#000000'>
-              www.lucas.com
+              <span style='color:#000000'>" &
+                If (
+                  B_outraTurma ≠ 1 ; 
+                    If ( HE.ha_Lista de aulas::c_totalVideos > 1;
+                      ", parte " & parte & "/" & HE.ha_Lista de aulas::c_totalVideos
+                    )
+                  ;
+                " (link de outra turma)"
+              ) 
+                & ": <a href='" & link & "' target='_blank'>" & link & " </a>
               </span>
               </p>
             </td>
@@ -229,7 +242,7 @@ a[x-apple-data-detectors] {
     </td>
   </tr>
 </tbody>
-
+"
 
 
 
