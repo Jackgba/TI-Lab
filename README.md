@@ -6,4 +6,4 @@ A estrutura de cada e-mail é separada por seções: cabeçalho, foto, titulo e 
 
 Um exemplo de um e-mail pronto:
 
-https://i.ibb.co/d6Ts9kP/unnamed.jpg
+<img src="https://i.ibb.co/VQ6KckC/example.png" height="60%" width="60%">
